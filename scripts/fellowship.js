@@ -56,6 +56,12 @@ document.addEventListener('DOMContentLoaded', () => {
   // COMMIT YOUR WORK
   // The commit message should read: "Chapter 1 complete - Made Middle Earth".
 
+  // ===================================================================
+  // If you're tired of having to click the button each time to run your
+  // function, uncomment the function call line below.
+  // makeMiddleEarth()
+  // ===================================================================
+
   // ============
   // Chapter 2
   // ============
@@ -75,6 +81,12 @@ document.addEventListener('DOMContentLoaded', () => {
   // COMMIT YOUR WORK
   // The commit message should read: "Chapter 2 complete - Made the Hobbits".
 
+  // ===================================================================
+  // If you're tired of having to click the button each time to run your
+  // function, uncomment the function call line below.
+  // makeHobbits()
+  // ===================================================================
+
   // ============
   // Chapter 3
   // ============
@@ -90,6 +102,12 @@ document.addEventListener('DOMContentLoaded', () => {
   // COMMIT YOUR WORK
   // The commit message should read: "Chapter 3 complete - Made the ring and gave it to Frodo".
 
+  // ===================================================================
+  // If you're tired of having to click the button each time to run your
+  // function, uncomment the function call line below.
+  // keepItSecretKeepItSafe()
+  // ===================================================================
+
   // ============
   // Chapter 4
   // ============
@@ -103,6 +121,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // COMMIT YOUR WORK
   // The commit message should read: "Chapter 4 complete - Made the Baddies"..
+
+  // ===================================================================
+  // If you're tired of having to click the button each time to run your
+  // function, uncomment the function call line below.
+  // makeBaddies()
+  // ===================================================================
 
   // ============
   // Chapter 5
@@ -119,6 +143,12 @@ document.addEventListener('DOMContentLoaded', () => {
   // COMMIT YOUR WORK
   // The commit message should read: "Chapter 5 complete - Made the Buddies".
 
+  // ===================================================================
+  // If you're tired of having to click the button each time to run your
+  // function, uncomment the function call line below.
+  // makeBuddies()
+  // ===================================================================
+
   // ============
   // Chapter 6
   // ============
@@ -132,6 +162,12 @@ document.addEventListener('DOMContentLoaded', () => {
   // COMMIT YOUR WORK
   // The commit message should read: "Chapter 6 complete - Left the Shire"
 
+  // ===================================================================
+  // If you're tired of having to click the button each time to run your
+  // function, uncomment the function call line below.
+  // leaveTheShire()
+  // ===================================================================
+
   // ============
   // Chapter 7
   // ============
@@ -143,6 +179,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // COMMIT YOUR WORK
   // The commit message should read: "Chapter 7 complete - Strider is changed to Aragorn"
+
+  // ===================================================================
+  // If you're tired of having to click the button each time to run your
+  // function, uncomment the function call line below.
+  // beautifulStranger()
+  // ===================================================================
 
   // ============
   // Chapter 8
@@ -159,6 +201,12 @@ document.addEventListener('DOMContentLoaded', () => {
   // COMMIT YOUR WORK
   // The commit message should read: "Chapter 8 complete - The Fellowship is created"
 
+  // ===================================================================
+  // If you're tired of having to click the button each time to run your
+  // function, uncomment the function call line below.
+  // forgeTheFellowShip()
+  // ===================================================================
+
   // ============
   // Chapter 9
   // ============
@@ -172,6 +220,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // COMMIT YOUR WORK
   // The commit message should read: "Chapter 9 complete - Updated Gandalf"
+
+  // ===================================================================
+  // If you're tired of having to click the button each time to run your
+  // function, uncomment the function call line below.
+  // theBalrog()
+  // ===================================================================
 
   // ============
   // Chapter 10
@@ -187,6 +241,12 @@ document.addEventListener('DOMContentLoaded', () => {
   // COMMIT YOUR WORK
   // The commit message should read: "Chapter 10 complete - horn of gandor blew and Boromir is dead"
 
+  // ===================================================================
+  // If you're tired of having to click the button each time to run your
+  // function, uncomment the function call line below.
+  // hornOfGondor()
+  // ===================================================================
+
   // ============
   // Chapter 11
   // ============
@@ -199,6 +259,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // COMMIT YOUR WORK
   // The commit message should read: "Chapter 11 complete - Sam and Frodo are in Mordor and Mount Doom has been created"
+
+  // ===================================================================
+  // If you're tired of having to click the button each time to run your
+  // function, uncomment the function call line below.
+  // itsDangerousToGoAlone()
+  // ===================================================================
 
   // ============
   // Chapter 12
@@ -214,6 +280,12 @@ document.addEventListener('DOMContentLoaded', () => {
   // COMMIT YOUR WORK
   // The commit message should read: "Chapter 12 complete - Gollum is trying to get the ring".
 
+  // ===================================================================
+  // If you're tired of having to click the button each time to run your
+  // function, uncomment the function call line below.
+  // weWantsIt()
+  // ===================================================================
+
   // ============
   // Chapter 13
   // ============
@@ -227,6 +299,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // COMMIT YOUR WORK
   // The commit message should read: "Chapter 13 complete -Gollum and the ring are gone, the baddies are done, and the hobbits are back in the shire".
+
+  // ===================================================================
+  // If you're tired of having to click the button each time to run your
+  // function, uncomment the function call line below.
+  // thereAndBackAgain()
+  // ===================================================================
 
 
   // =====================================
