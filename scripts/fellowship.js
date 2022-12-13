@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // ============
   // Chapter 1
   // ============
-  const makeMiddleEarth = () => {
+  const makeMiddleEarth = function () {
 
     // HINT: Make a console.log for each of your functions to make sure that, when you click, the correct function is being called!
     console.log('making Middle Earth');
@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // ============
   // Chapter 2
   // ============
-  const makeHobbits = () => {
+  const makeHobbits = function () {
 
     // Goal: display an unordered list of hobbits in the shire (which is the first article tag on the page)
 
@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // ============
   // Chapter 3
   // ============
-  const keepItSecretKeepItSafe = () => {
+  const keepItSecretKeepItSafe = function () {
 
     // 1. create an empty div with an id of 'the-ring'
 
@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // ============
   // Chapter 4
   // ============
-  const makeBaddies = () => {
+  const makeBaddies = function () {
 
     // 1. display an unordered list of baddies in Mordor
 
@@ -121,7 +121,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // ============
   // Chapter 5
   // ============
-  const makeBuddies = () => {
+  const makeBuddies = function () {
 
     // 1. create an aside tag and append it to middle-earth below mordor
 
@@ -140,7 +140,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Chapter 6
   // ============
 
-  const leaveTheShire = () => {
+  const leaveTheShire = function () {
     // 1. grab the hobbits (the ul in which they reside) and move them to Rivendell
     // hint: the hobbits ul is a childNode of The-Shire-- there is way to get a list of childNodes
 
@@ -152,7 +152,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // ============
   // Chapter 7
   // ============
-  const beautifulStranger = () => {
+  const beautifulStranger = function () {
 
     // 1. change the buddy 'Strider' text to "Aragorn"
 
@@ -164,7 +164,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // ============
   // Chapter 8
   // ============
-  const forgeTheFellowShip = () => {
+  const forgeTheFellowShip = function () {
 
     // 1. create a new div with an id 'the-fellowship'
 
@@ -182,7 +182,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // ============
   // Chapter 9
   // ============
-  const theBalrog = () => {
+  const theBalrog = function () {
 
     // 1. change the 'Gandalf' text to 'Gandalf the White'
 
@@ -198,7 +198,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // ============
   // Chapter 10
   // ============
-  const hornOfGondor = () => {
+  const hornOfGondor = function () {
 
     // 1. create a pop-up alert that the horn of gondor has been blown
 
@@ -214,7 +214,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // ============
   // Chapter 11
   // ============
-  const itsDangerousToGoAlone = () => {
+  const itsDangerousToGoAlone = function () {
 
     // 1. take Frodo and Sam out of the fellowship and move them to Mordor (they don't need to be inside a ul in Mordor)
 
@@ -228,7 +228,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // ============
   // Chapter 12
   // ============
-  const weWantsIt = () => {
+  const weWantsIt = function () {
 
     // 1. Create a div with an id of 'gollum' and add it to Mordor
 
@@ -244,7 +244,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // ============
   // Chapter 13
   // ============
-  const thereAndBackAgain = () => {
+  const thereAndBackAgain = function () {
 
     // 1. remove Gollum and the Ring from the DOM
 
