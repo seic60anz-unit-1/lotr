@@ -43,19 +43,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // console.log("Trying to make middle earth.");
 
     // 1. create a section tag with an id of middle-earth
-
     // 2. append the section to the body of the DOM.
-
     // 3. use a for loop to iterate over the lands array that does the following:
-
     //   3a. creates an article tag (there should be one for each land when the loop is done)
-
     //   3b. gives each land article an `id` tag of the corresponding land name
-
     //   3c. creates an h1 with the name of the land as text content
-
     //   3d. appends the h1 to the article just created
-
     //   3e. appends each land to the middle-earth section
 
   }
@@ -71,12 +64,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // Goal: display an unordered list of hobbits in the shire (which is the first article tag on the page)
 
     // 1. create a 'ul'
-
     // 2. make each hobbit an li element and append it to the 'ul' you just created
     // hint: use the given 'hobbits' array and use a loop
-
     // 3. also, give each hobbit (`li`) a class of "hobbit"
-
     // 4. append the ul to the shire
     // hint: get 'The-Shire' by using its id
 
@@ -91,10 +81,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const keepItSecretKeepItSafe = function () {
 
     // 1. create an empty div with an id of 'the-ring'
-
     // 2. add the ring as a child of Frodo
     // hint: Frodo does not have an id, but there is a command to retrieve all elements with a certain class. This should give you an array for you to access . . .
-
     // when you think you have given Frodo the ring, check in your Elements tab to see that it works correctly
 
   }
@@ -108,9 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const makeBaddies = function () {
 
     // 1. display an unordered list of baddies in Mordor
-
     // 2. give each of the baddies a class of "baddy"
-
     // 3. remember to append the ul to Mordor
 
   }
@@ -124,11 +110,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const makeBuddies = function () {
 
     // 1. create an aside tag and append it to middle-earth below mordor
-
     // 2. display an unordered list of buddies in the aside
-
     // 3. give each of the buddies a class of "buddy"
-
     // 4. don't forget to append them to the aside
 
   }
@@ -167,11 +150,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const forgeTheFellowShip = function () {
 
     // 1. create a new div with an id 'the-fellowship'
-
     // 2. add an h1 with the text 'The Fellowship' to this new div
-
     // 3. append the fellowship to middle-earth
-
     // 4. add the unordered lists of hobbits and buddies to 'the-fellowship'
 
   }
@@ -185,9 +165,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const theBalrog = function () {
 
     // 1. change the 'Gandalf' text to 'Gandalf the White'
-
     // 2. add a class "the-white" to this element
-
     // 3. in the style.css file, add a css rule to make elements of the class "the-white" have a white background and a grey border
 
   }
@@ -201,9 +179,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const hornOfGondor = function () {
 
     // 1. create a pop-up alert that the horn of gondor has been blown
-
     // 2. Boromir's been killed by the Uruk-hai! Put a linethrough on Boromir's name
-
     // 3. Tricky: Remove the Uruk-Hai from the Baddies on the page
 
   }
@@ -217,7 +193,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const itsDangerousToGoAlone = function () {
 
     // 1. take Frodo and Sam out of the fellowship and move them to Mordor (they don't need to be inside a ul in Mordor)
-
     // 2. add a div with an id of 'mount-doom' to Mordor
 
   }
@@ -231,9 +206,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const weWantsIt = function () {
 
     // 1. Create a div with an id of 'gollum' and add it to Mordor
-
     // 2. Move the ring from Frodo and give it to Gollum
-
     // 3. Move Gollum into Mount Doom
 
   }
@@ -247,9 +220,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const thereAndBackAgain = function () {
 
     // 1. remove Gollum and the Ring from the DOM
-
     // 2. remove all the baddies from the DOM
-
     // 3. Move all the hobbits back to the shire
 
   }
