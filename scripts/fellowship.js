@@ -123,12 +123,17 @@ document.addEventListener('DOMContentLoaded', () => {
   const keepItSecretKeepItSafe = function () {
 
     // 1. create an empty div with an id of 'the-ring'
-    let div = document.createElement('div');
-    div.id = 'the-ring'
+    let ring = document.createElement('div');
+    ring.id = 'the-ring'
 
     // 2. add the ring as a child of Frodo
-    // let ul = document.querySelectorAll('.hobbit')
-    // console.log(ul)
+    let lisHobbit = document.querySelectorAll('.hobbit')
+    for (let i = 0; i < lisHobbit.length ; i++) {
+      if (lisHobbit[i].innerHTML.includes('Frodo') === true){
+        lisHobbit[i].appendChild(ring)
+      }
+    }
+    
 
     
   
