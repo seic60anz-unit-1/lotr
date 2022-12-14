@@ -136,9 +136,17 @@ document.addEventListener('DOMContentLoaded', () => {
   const makeBaddies = function () {
 
     // 1. display an unordered list of baddies in Mordor
+    const newUl = document.createElement('ul')
     // 2. give each of the baddies a class of "baddy"
+    for (let baddy of baddies) {
+      const newLi = document.createElement('li')
+      newLi.textContent = baddy
+      newLi.classList.add('baddy')
+      newUl.append(newLi)
+    }
     // 3. remember to append the ul to Mordor
-
+    const mordor = document.querySelector('#Mordor')
+    mordor.append(newUl)
   }
 
   // COMMIT YOUR WORK
@@ -147,7 +155,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // ===================================================================
   // If you're tired of having to click the button each time to run your
   // function, uncomment the function call line below.
-  // makeBaddies()
+  makeBaddies()
   // ===================================================================
 
   // ============
