@@ -43,10 +43,10 @@ document.addEventListener('DOMContentLoaded', () => {
     // console.log("Trying to make middle earth.");
 
     // 1. create a section tag with an id of middle-earth
-    const middleEarth = document.createElement('section');
-    middleEarth.id = 'middle-earth';
+    let section = document.createElement('section');
+    section.id = 'middle-earth';
     // 2. append the section to the body of the DOM.
-    document.querySelector('body').appendChild(middleEarth);
+    document.querySelector('body').appendChild(section);
     // 3. use a for loop to iterate over the lands array that does the following:
     //   3a. creates an article tag (there should be one for each land when the loop is done)
           for (let i of lands) {
@@ -103,7 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     // 4. append the ul to the shire
     // hint: get 'The-Shire' by using its id
-      const shire = document.querySelector('#'+lands[lands.indexOf('The-Shire')]);
+      let shire = document.querySelector('#'+lands[lands.indexOf('The-Shire')]);
       shire.appendChild(ul);
   }
 
@@ -166,14 +166,13 @@ document.addEventListener('DOMContentLoaded', () => {
       const mordor = document.querySelector('#'+lands[lands.indexOf('Mordor')]);
       mordor.appendChild(ul);
   }
-
   // COMMIT YOUR WORK
   // The commit message should read: "Chapter 4 complete - Made the Baddies"..
 
   // ===================================================================
   // If you're tired of having to click the button each time to run your
   // function, uncomment the function call line below.
-  // makeBaddies()
+  makeBaddies()
   // ===================================================================
 
   // ============
@@ -182,12 +181,22 @@ document.addEventListener('DOMContentLoaded', () => {
   const makeBuddies = function () {
 
     // 1. create an aside tag and append it to middle-earth below mordor
+    let aside = document.createElement('aside');
+    let middleEarth = document.querySelector('#middle-earth');
+    middleEarth.appendChild(aside);
     // 2. display an unordered list of buddies in the aside
+    let ul = document.createElement('ul');
+    for (let i = 0; i < buddies.length; i++) {
+      let li = document.createElement('li');
+      let textNode = document.createTextNode(buddies[i]);
+      li.appendChild(textNode);
+      ul.appendChild(li);
     // 3. give each of the buddies a class of "buddy"
+      li.className = 'buddy';
+    }
     // 4. don't forget to append them to the aside
-
+      aside.appendChild(ul);
   }
-
   // COMMIT YOUR WORK
   // The commit message should read: "Chapter 5 complete - Made the Buddies".
 
