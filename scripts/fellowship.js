@@ -234,9 +234,13 @@ document.addEventListener('DOMContentLoaded', () => {
   const beautifulStranger = function () {
 
     // 1. change the buddy 'Strider' text to "Aragorn"
-    let lisBuddies = document.querySelectorAll('#buddies')
+    let lisBuddies = document.querySelectorAll(".buddy");
+    for (i = 0; i < lisBuddies.length; i++) {
+      if (lisBuddies[i].innerHTML === "Strider") {
+        lisBuddies[i].innerHTML = "Aragorn";
+      }
+    }
   }
-
   // COMMIT YOUR WORK
   // The commit message should read: "Chapter 7 complete - Strider is changed to Aragorn"
 
