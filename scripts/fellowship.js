@@ -213,26 +213,19 @@ document.addEventListener('DOMContentLoaded', () => {
   const leaveTheShire = function () {
     // 1. grab the hobbits (the ul in which they reside) and move them to Rivendell
     // hint: the hobbits ul is a childNode of The-Shire-- there is way to get a list of childNodes
-    let lisHobbit = document.querySelector("article#The-Shire > ul");
-    console.log(lisHobbit)
-    let rivendell = document.querySelector("#Rivendell")
-    console.log(rivendell)
-    rivendell.appendChild(lisHobbit)
-
-
-
-
-
-
+    let lisHobbit = document.querySelectorAll(".hobbit");
+    let rivendell = document.querySelector("#Rivendell");
+    for (let i = 0; i < hobbits.length; i++) {
+      rivendell.appendChild(lisHobbit[i]);
+    }
   }
-
   // COMMIT YOUR WORK
   // The commit message should read: "Chapter 6 complete - Left the Shire"
 
   // ===================================================================
   // If you're tired of having to click the button each time to run your
   // function, uncomment the function call line below.
-  // leaveTheShire()
+  leaveTheShire()
   // ===================================================================
 
   // ============
@@ -241,7 +234,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const beautifulStranger = function () {
 
     // 1. change the buddy 'Strider' text to "Aragorn"
-
+    let lisBuddies = document.querySelectorAll('#buddies')
   }
 
   // COMMIT YOUR WORK
