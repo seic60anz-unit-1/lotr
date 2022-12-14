@@ -203,7 +203,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // ===================================================================
   // If you're tired of having to click the button each time to run your
   // function, uncomment the function call line below.
-  // makeBuddies()
+  makeBuddies()
   // ===================================================================
 
   // ============
@@ -213,6 +213,16 @@ document.addEventListener('DOMContentLoaded', () => {
   const leaveTheShire = function () {
     // 1. grab the hobbits (the ul in which they reside) and move them to Rivendell
     // hint: the hobbits ul is a childNode of The-Shire-- there is way to get a list of childNodes
+    let lisHobbit = document.querySelector("article#The-Shire > ul");
+    console.log(lisHobbit)
+    let rivendell = document.querySelector("#Rivendell")
+    console.log(rivendell)
+    rivendell.appendChild(lisHobbit)
+
+
+
+
+
 
   }
 
