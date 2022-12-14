@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // ===================================================================
   // If you're tired of having to click the button each time to run your
   // function, uncomment the function call line below.
-  // makeMiddleEarth()
+  makeMiddleEarth()
   // ===================================================================
 
   // ============
@@ -103,7 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // ===================================================================
   // If you're tired of having to click the button each time to run your
   // function, uncomment the function call line below.
-  // makeHobbits()
+  makeHobbits()
   // ===================================================================
 
   // ============
@@ -112,10 +112,14 @@ document.addEventListener('DOMContentLoaded', () => {
   const keepItSecretKeepItSafe = function () {
 
     // 1. create an empty div with an id of 'the-ring'
+    const newDiv = document.createElement('div')
+    newDiv.setAttribute('id', 'the-ring')
     // 2. add the ring as a child of Frodo
     // hint: Frodo does not have an id, but there is a command to retrieve all elements with a certain class. This should give you an array for you to access . . .
     // when you think you have given Frodo the ring, check in your Elements tab to see that it works correctly
-
+    const frodo = document.querySelector('#The-Shire ul li')
+    frodo.append(newDiv)
+    console.log(frodo)
   }
 
   // COMMIT YOUR WORK
@@ -124,7 +128,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // ===================================================================
   // If you're tired of having to click the button each time to run your
   // function, uncomment the function call line below.
-  // keepItSecretKeepItSafe()
+  keepItSecretKeepItSafe()
   // ===================================================================
 
   // ============
