@@ -270,9 +270,10 @@ document.addEventListener('DOMContentLoaded', () => {
     let lisBuddies = document.querySelectorAll(".buddy");
     for (let i = 0; i < hobbits.length; i++) {
       fellowship.appendChild(lisHobbits[i]);
+    }
+    for (let i = 0; i < buddies.length; i++) {
       fellowship.appendChild(lisBuddies[i]);
     }
-
   }
 
   // COMMIT YOUR WORK
@@ -281,7 +282,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // ===================================================================
   // If you're tired of having to click the button each time to run your
   // function, uncomment the function call line below.
-  // forgeTheFellowShip()
+  forgeTheFellowShip()
   // ===================================================================
 
   // ============
@@ -290,9 +291,16 @@ document.addEventListener('DOMContentLoaded', () => {
   const theBalrog = function () {
 
     // 1. change the 'Gandalf' text to 'Gandalf the White'
+    let lisBuddies = document.querySelectorAll(".buddy");
+    for (i = 0; i < lisBuddies.length; i++) {
+      if (lisBuddies[i].innerHTML.includes("Gandalf") === true) {
+        lisBuddies[i].innerHTML = "Gandalf the White";
     // 2. add a class "the-white" to this element
+        lisBuddies[i].classList.add("the-white");
+      }
+    }
     // 3. in the style.css file, add a css rule to make elements of the class "the-white" have a white background and a grey border
-
+    
   }
 
   // COMMIT YOUR WORK
