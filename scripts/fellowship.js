@@ -119,7 +119,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // when you think you have given Frodo the ring, check in your Elements tab to see that it works correctly
     const frodo = document.querySelector('#The-Shire ul li')
     frodo.append(newDiv)
-    console.log(frodo)
   }
 
   // COMMIT YOUR WORK
