@@ -300,7 +300,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
     // 3. in the style.css file, add a css rule to make elements of the class "the-white" have a white background and a grey border
-    
+    /*DONE!*/
   }
 
   // COMMIT YOUR WORK
@@ -309,7 +309,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // ===================================================================
   // If you're tired of having to click the button each time to run your
   // function, uncomment the function call line below.
-  // theBalrog()
+  theBalrog()
   // ===================================================================
 
   // ============
@@ -318,9 +318,23 @@ document.addEventListener('DOMContentLoaded', () => {
   const hornOfGondor = function () {
 
     // 1. create a pop-up alert that the horn of gondor has been blown
+    alert('The horn of gondor has been blown!')
     // 2. Boromir's been killed by the Uruk-hai! Put a linethrough on Boromir's name
+    let lisBuddies = document.querySelectorAll(".buddy");
+    for (i = 0; i < lisBuddies.length; i++) {
+      if (lisBuddies[i].innerHTML.includes("Boromir") === true) {
+        lisBuddies[i].style.textDecoration = "line-through";
+      }
+    }
     // 3. Tricky: Remove the Uruk-Hai from the Baddies on the page
-
+    let lisBaddies = document.querySelectorAll(".baddy");
+    for (let i = 0; i < lisBaddies.length; i++) {
+      if (lisBaddies[i].innerHTML === 'The Uruk-hai') {
+        lisBaddies[i].remove()
+      }
+  
+    }
+    
   }
 
   // COMMIT YOUR WORK
