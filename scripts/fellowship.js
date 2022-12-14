@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const makeMiddleEarth = function () {
 
     // HINT: Make a console.log for each of your functions to make sure that, when you click, the correct function is being called!
-    console.log('making Middle Earth');
+    // console.log('making Middle Earth');
     // console.log("Trying to make middle earth.");
 
     // 1. create a section tag with an id of middle-earth
@@ -56,20 +56,19 @@ document.addEventListener('DOMContentLoaded', () => {
     //   3b. gives each land article an `id` tag of the corresponding land name
           const listArts = document.querySelectorAll('article');
           for (let i = 0; i < lands.length; i++) {
-            listArts[i].id = lands[i]
+            listArts[i].id = lands[i];
           }
     //   3c. creates an h1 with the name of the land as text content
           for (let i = 0; i < lands.length; i++) {
-            let h1Land = document.createElement('h1');
-            let textLand = document.createTextNode(lands[i]);
-            h1Land.appendChild(textLand);
+            let h1 = document.createElement('h1');
+            let textNode = document.createTextNode(lands[i]);
+            h1.appendChild(textNode);
     //   3d. appends the h1 to the article just created
-            document.querySelector('#'+lands[i]).appendChild(h1Land);
+            document.querySelector('#'+lands[i]).appendChild(h1);
           }
     //   3e. appends each land to the middle-earth section
           for (let i = 0; i < lands.length; i++) {
-            console.log(listArts[i])
-            document.querySelector('#middle-earth').appendChild(listArts[i])
+            document.querySelector('#middle-earth').appendChild(listArts[i]);
           }
   }
   // COMMIT YOUR WORK
@@ -78,7 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // ===================================================================
   // If you're tired of having to click the button each time to run your
   // function, uncomment the function call line below.
-  // makeMiddleEarth()
+  makeMiddleEarth()
   // ===================================================================
 
   // ============
@@ -89,11 +88,21 @@ document.addEventListener('DOMContentLoaded', () => {
     // Goal: display an unordered list of hobbits in the shire (which is the first article tag on the page)
 
     // 1. create a 'ul'
+    let ul = document.createElement('ul');
     // 2. make each hobbit an li element and append it to the 'ul' you just created
+    for (let i = 0; i < hobbits.length; i++) {
+      let li = document.createElement('li');
+      let textNode = document.createTextNode(hobbits[i]);
+      console.log(hobbits[i])
+      li.appendChild(textNode);
+      ul.appendChild(li);
+    }
     // hint: use the given 'hobbits' array and use a loop
     // 3. also, give each hobbit (`li`) a class of "hobbit"
     // 4. append the ul to the shire
     // hint: get 'The-Shire' by using its id
+      const shire = document.querySelector('#'+lands[0])
+      shire.appendChild(ul)
 
   }
 
