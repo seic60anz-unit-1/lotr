@@ -213,10 +213,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const leaveTheShire = function () {
     // 1. grab the hobbits (the ul in which they reside) and move them to Rivendell
     // hint: the hobbits ul is a childNode of The-Shire-- there is way to get a list of childNodes
-    let lisHobbit = document.querySelectorAll(".hobbit");
+    let lisHobbits = document.querySelectorAll(".hobbit");
     let rivendell = document.querySelector("#Rivendell");
     for (let i = 0; i < hobbits.length; i++) {
-      rivendell.appendChild(lisHobbit[i]);
+      rivendell.appendChild(lisHobbits[i]);
     }
   }
   // COMMIT YOUR WORK
@@ -247,7 +247,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // ===================================================================
   // If you're tired of having to click the button each time to run your
   // function, uncomment the function call line below.
-  // beautifulStranger()
+  beautifulStranger()
   // ===================================================================
 
   // ============
@@ -256,9 +256,22 @@ document.addEventListener('DOMContentLoaded', () => {
   const forgeTheFellowShip = function () {
 
     // 1. create a new div with an id 'the-fellowship'
+    let fellowship = document.createElement('div')
+    fellowship.id = 'the-fellowship'
     // 2. add an h1 with the text 'The Fellowship' to this new div
+    let h1 = document.createElement('h1');
+    let textNode = document.createTextNode('The Fellowship');
+    h1.appendChild(textNode);
+    fellowship.appendChild(h1);
     // 3. append the fellowship to middle-earth
+    document.querySelector("#middle-earth").appendChild(fellowship)
     // 4. add the unordered lists of hobbits and buddies to 'the-fellowship'
+    let lisHobbits = document.querySelectorAll(".hobbit");
+    let lisBuddies = document.querySelectorAll(".buddy");
+    for (let i = 0; i < hobbits.length; i++) {
+      fellowship.appendChild(lisHobbits[i]);
+      fellowship.appendChild(lisBuddies[i]);
+    }
 
   }
 
