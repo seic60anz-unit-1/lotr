@@ -164,10 +164,20 @@ document.addEventListener('DOMContentLoaded', () => {
   const makeBuddies = function () {
 
     // 1. create an aside tag and append it to middle-earth below mordor
+    const newAside = document.createElement('aside')
+    const middleEarth = document.querySelector('#middle-earth')
+    middleEarth.append(newAside)
     // 2. display an unordered list of buddies in the aside
+    const newUl = document.createElement('ul')
     // 3. give each of the buddies a class of "buddy"
+    for (let buddy of buddies) {
+      const newLi = document.createElement('li')
+      newLi.textContent = buddy
+      newLi.classList.add('buddy')
+      newUl.append(newLi)
+    }
     // 4. don't forget to append them to the aside
-
+    newAside.append(newUl)
   }
 
   // COMMIT YOUR WORK
@@ -176,7 +186,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // ===================================================================
   // If you're tired of having to click the button each time to run your
   // function, uncomment the function call line below.
-  // makeBuddies()
+  makeBuddies()
   // ===================================================================
 
   // ============
