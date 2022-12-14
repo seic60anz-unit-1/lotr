@@ -89,23 +89,22 @@ document.addEventListener('DOMContentLoaded', () => {
     // Goal: display an unordered list of hobbits in the shire (which is the first article tag on the page)
 
     // 1. create a 'ul'
-    const ul = document.createElement('ul');
+    let ul = document.createElement('ul');
     // 2. make each hobbit an li element and append it to the 'ul' you just created
     for (let i = 0; i < hobbits.length; i++) {
       let li = document.createElement('li');
       let textNode = document.createTextNode(hobbits[i]);
-      console.log(hobbits[i])
       li.appendChild(textNode);
       ul.appendChild(li);
     
     // hint: use the given 'hobbits' array and use a loop
     // 3. also, give each hobbit (`li`) a class of "hobbit"
-      li.className = 'hobbit'
+      li.className = 'hobbit';
     }
     // 4. append the ul to the shire
     // hint: get 'The-Shire' by using its id
-      const shire = document.querySelector('#'+lands[lands.indexOf('The-Shire')])
-      shire.appendChild(ul)
+      const shire = document.querySelector('#'+lands[lands.indexOf('The-Shire')]);
+      shire.appendChild(ul);
   }
 
   // COMMIT YOUR WORK
@@ -124,19 +123,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 1. create an empty div with an id of 'the-ring'
     let ring = document.createElement('div');
-    ring.id = 'the-ring'
+    ring.id = 'the-ring';
 
     // 2. add the ring as a child of Frodo
     let lisHobbit = document.querySelectorAll('.hobbit')
     for (let i = 0; i < lisHobbit.length ; i++) {
       if (lisHobbit[i].innerHTML.includes('Frodo') === true){
-        lisHobbit[i].appendChild(ring)
+        lisHobbit[i].appendChild(ring);
       }
     }
-    
-
-    
-  
 
     // hint: Frodo does not have an id, but there is a command to retrieve all elements with a certain class. This should give you an array for you to access . . .
     // when you think you have given Frodo the ring, check in your Elements tab to see that it works correctly
@@ -149,7 +144,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // ===================================================================
   // If you're tired of having to click the button each time to run your
   // function, uncomment the function call line below.
-  // keepItSecretKeepItSafe()
+  keepItSecretKeepItSafe()
   // ===================================================================
 
   // ============
@@ -158,9 +153,18 @@ document.addEventListener('DOMContentLoaded', () => {
   const makeBaddies = function () {
 
     // 1. display an unordered list of baddies in Mordor
+    let ul = document.createElement('ul');
+    for (let i = 0; i < baddies.length; i++) {
+      let li = document.createElement('li');
+      let textNode = document.createTextNode(baddies[i]);
+      li.appendChild(textNode);
+      ul.appendChild(li);
     // 2. give each of the baddies a class of "baddy"
+      li.className = 'baddy';
+    }
     // 3. remember to append the ul to Mordor
-
+      const mordor = document.querySelector('#'+lands[lands.indexOf('Mordor')]);
+      mordor.appendChild(ul);
   }
 
   // COMMIT YOUR WORK
