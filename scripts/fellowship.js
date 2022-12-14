@@ -50,13 +50,13 @@ document.addEventListener('DOMContentLoaded', () => {
     // 3. use a for loop to iterate over the lands array that does the following:
     //   3a. creates an article tag (there should be one for each land when the loop is done)
           for (let i of lands) {
-            let artLand = document.createElement('article');
-            document.querySelector('body').appendChild(artLand);
+            let article = document.createElement('article');
+            document.querySelector('body').appendChild(article);
           }
     //   3b. gives each land article an `id` tag of the corresponding land name
-          const listArts = document.querySelectorAll('article');
+          let article = document.querySelectorAll('article');
           for (let i = 0; i < lands.length; i++) {
-            listArts[i].id = lands[i];
+            article[i].id = lands[i];
           }
     //   3c. creates an h1 with the name of the land as text content
           for (let i = 0; i < lands.length; i++) {
@@ -68,9 +68,10 @@ document.addEventListener('DOMContentLoaded', () => {
           }
     //   3e. appends each land to the middle-earth section
           for (let i = 0; i < lands.length; i++) {
-            document.querySelector('#middle-earth').appendChild(listArts[i]);
+            document.querySelector('#middle-earth').appendChild(article[i]);
           }
   }
+
   // COMMIT YOUR WORK
   // The commit message should read: "Chapter 1 complete - Made Middle Earth".
 
@@ -88,7 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Goal: display an unordered list of hobbits in the shire (which is the first article tag on the page)
 
     // 1. create a 'ul'
-    let ul = document.createElement('ul');
+    const ul = document.createElement('ul');
     // 2. make each hobbit an li element and append it to the 'ul' you just created
     for (let i = 0; i < hobbits.length; i++) {
       let li = document.createElement('li');
@@ -96,14 +97,15 @@ document.addEventListener('DOMContentLoaded', () => {
       console.log(hobbits[i])
       li.appendChild(textNode);
       ul.appendChild(li);
-    }
+    
     // hint: use the given 'hobbits' array and use a loop
     // 3. also, give each hobbit (`li`) a class of "hobbit"
+      li.className = 'hobbit'
+    }
     // 4. append the ul to the shire
     // hint: get 'The-Shire' by using its id
-      const shire = document.querySelector('#'+lands[0])
+      const shire = document.querySelector('#'+lands[lands.indexOf('The-Shire')])
       shire.appendChild(ul)
-
   }
 
   // COMMIT YOUR WORK
@@ -112,7 +114,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // ===================================================================
   // If you're tired of having to click the button each time to run your
   // function, uncomment the function call line below.
-  // makeHobbits()
+  makeHobbits()
   // ===================================================================
 
   // ============
@@ -121,7 +123,16 @@ document.addEventListener('DOMContentLoaded', () => {
   const keepItSecretKeepItSafe = function () {
 
     // 1. create an empty div with an id of 'the-ring'
+    let div = document.createElement('div');
+    div.id = 'the-ring'
+
     // 2. add the ring as a child of Frodo
+    // let ul = document.querySelectorAll('.hobbit')
+    // console.log(ul)
+
+    
+  
+
     // hint: Frodo does not have an id, but there is a command to retrieve all elements with a certain class. This should give you an array for you to access . . .
     // when you think you have given Frodo the ring, check in your Elements tab to see that it works correctly
 
