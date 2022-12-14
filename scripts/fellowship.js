@@ -43,16 +43,35 @@ document.addEventListener('DOMContentLoaded', () => {
     // console.log("Trying to make middle earth.");
 
     // 1. create a section tag with an id of middle-earth
+    const middleEarth = document.createElement('section');
+    middleEarth.id = 'middle-earth';
     // 2. append the section to the body of the DOM.
+    document.querySelector('body').appendChild(middleEarth);
     // 3. use a for loop to iterate over the lands array that does the following:
     //   3a. creates an article tag (there should be one for each land when the loop is done)
+          for (let i of lands) {
+            let artLand = document.createElement('article');
+            document.querySelector('body').appendChild(artLand);
+          }
     //   3b. gives each land article an `id` tag of the corresponding land name
+          const listArts = document.querySelectorAll('article');
+          for (let i = 0; i < lands.length; i++) {
+            listArts[i].id = lands[i]
+          }
     //   3c. creates an h1 with the name of the land as text content
+          for (let i = 0; i < lands.length; i++) {
+            let h1Land = document.createElement('h1');
+            let textLand = document.createTextNode(lands[i]);
+            h1Land.appendChild(textLand);
     //   3d. appends the h1 to the article just created
+            document.querySelector('#'+lands[i]).appendChild(h1Land);
+          }
     //   3e. appends each land to the middle-earth section
-
+          for (let i = 0; i < lands.length; i++) {
+            console.log(listArts[i])
+            document.querySelector('#middle-earth').appendChild(listArts[i])
+          }
   }
-
   // COMMIT YOUR WORK
   // The commit message should read: "Chapter 1 complete - Made Middle Earth".
 
