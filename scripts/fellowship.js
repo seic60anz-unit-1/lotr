@@ -330,11 +330,9 @@ document.addEventListener('DOMContentLoaded', () => {
     let lisBaddies = document.querySelectorAll(".baddy");
     for (let i = 0; i < lisBaddies.length; i++) {
       if (lisBaddies[i].innerHTML === 'The Uruk-hai') {
-        lisBaddies[i].remove()
+        lisBaddies[i].remove();
       }
-  
-    }
-    
+    }   
   }
 
   // COMMIT YOUR WORK
@@ -343,7 +341,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // ===================================================================
   // If you're tired of having to click the button each time to run your
   // function, uncomment the function call line below.
-  // hornOfGondor()
+  hornOfGondor()
   // ===================================================================
 
   // ============
@@ -352,8 +350,20 @@ document.addEventListener('DOMContentLoaded', () => {
   const itsDangerousToGoAlone = function () {
 
     // 1. take Frodo and Sam out of the fellowship and move them to Mordor (they don't need to be inside a ul in Mordor)
+    let lisHobbits = document.querySelectorAll(".hobbit");
+    let mordor = document.querySelector('#Mordor');
+    for (let i = 0; i < lisHobbits.length; i++) {
+      if (lisHobbits[i].innerHTML.includes('Frodo') === true) {
+        mordor.appendChild(lisHobbits[i]);
+      }
+      if (lisHobbits[i].innerHTML.includes('Sam') === true) {
+        mordor.appendChild(lisHobbits[i]);
+      }
+    }
     // 2. add a div with an id of 'mount-doom' to Mordor
-
+    let div = document.createElement('div');
+    div.id = 'mount-doom'
+    mordor.appendChild(div)
   }
 
   // COMMIT YOUR WORK
