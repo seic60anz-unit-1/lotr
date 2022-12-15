@@ -311,8 +311,17 @@ document.addEventListener('DOMContentLoaded', () => {
   const itsDangerousToGoAlone = function () {
 
     // 1. take Frodo and Sam out of the fellowship and move them to Mordor (they don't need to be inside a ul in Mordor)
-    // 2. add a div with an id of 'mount-doom' to Mordor
+    const frodo = document.querySelector('#middle-earth #the-fellowship ul li')
+    const sam = document.querySelector('#middle-earth #the-fellowship ul li:nth-child(2)')
 
+    const mordor = document.querySelector('#Mordor')
+    mordor.append(frodo, sam)
+    
+    // 2. add a div with an id of 'mount-doom' to Mordor
+    const newDiv = document.createElement('div')
+    newDiv.setAttribute('id', 'mount-doom')
+    mordor.append(newDiv)
+    console.log(document.querySelector('#middle-earth'))
   }
 
   // COMMIT YOUR WORK
@@ -321,7 +330,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // ===================================================================
   // If you're tired of having to click the button each time to run your
   // function, uncomment the function call line below.
-  // itsDangerousToGoAlone()
+  itsDangerousToGoAlone()
   // ===================================================================
 
   // ============
