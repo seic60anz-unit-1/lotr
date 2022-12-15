@@ -269,7 +269,6 @@ document.addEventListener('DOMContentLoaded', () => {
     gandalf.textContent = "Gandalf the White"
     // 2. add a class "the-white" to this element
     gandalf.classList.add('the-white')
-    console.log(gandalf)
     // 3. in the style.css file, add a css rule to make elements of the class "the-white" have a white background and a grey border  
   }
 
@@ -288,9 +287,13 @@ document.addEventListener('DOMContentLoaded', () => {
   const hornOfGondor = function () {
 
     // 1. create a pop-up alert that the horn of gondor has been blown
+    alert("Horn of Gondor has been blown!")
     // 2. Boromir's been killed by the Uruk-hai! Put a linethrough on Boromir's name
+    const boromir = document.querySelector('#middle-earth #the-fellowship ul:last-child li:last-child')
+    boromir.style.textDecoration = "line-through"
     // 3. Tricky: Remove the Uruk-Hai from the Baddies on the page
-
+    const urukHai = document.querySelector('#Mordor ul li:nth-child(3)')
+    urukHai.remove()
   }
 
   // COMMIT YOUR WORK
