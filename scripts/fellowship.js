@@ -367,9 +367,23 @@ document.addEventListener('DOMContentLoaded', () => {
   const thereAndBackAgain = function () {
 
     // 1. remove Gollum and the Ring from the DOM
+    const gollum = document.querySelector('#gollum')
+    gollum.remove()
+    
     // 2. remove all the baddies from the DOM
+    const baddies = document.querySelector('#Mordor ul')
+    baddies.remove()
     // 3. Move all the hobbits back to the shire
+    const newUl = document.createElement('ul')
+    const hobbits = document.querySelectorAll('.hobbit')
+    for (let hobbit of hobbits) {
+      newUl.append(hobbit)
+    }
+    const theShire = document.querySelector('#The-Shire')
+    theShire.append(newUl)
 
+    const theFellowshipUl = document.querySelector('#the-fellowship ul')
+    theFellowshipUl.remove()
   }
 
   // COMMIT YOUR WORK
@@ -378,7 +392,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // ===================================================================
   // If you're tired of having to click the button each time to run your
   // function, uncomment the function call line below.
-  // thereAndBackAgain()
+  thereAndBackAgain()
   // ===================================================================
 
 
