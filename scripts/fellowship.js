@@ -265,9 +265,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const theBalrog = function () {
 
     // 1. change the 'Gandalf' text to 'Gandalf the White'
+    const gandalf = document.querySelector('#middle-earth #the-fellowship ul:last-child li')
+    gandalf.textContent = "Gandalf the White"
     // 2. add a class "the-white" to this element
-    // 3. in the style.css file, add a css rule to make elements of the class "the-white" have a white background and a grey border
-
+    gandalf.classList.add('the-white')
+    console.log(gandalf)
+    // 3. in the style.css file, add a css rule to make elements of the class "the-white" have a white background and a grey border  
   }
 
   // COMMIT YOUR WORK
@@ -276,7 +279,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // ===================================================================
   // If you're tired of having to click the button each time to run your
   // function, uncomment the function call line below.
-  // theBalrog()
+  theBalrog()
   // ===================================================================
 
   // ============
