@@ -391,7 +391,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // 3. Move Gollum into Mount Doom
     let mountDoom = document.querySelector('#mount-doom');
     mountDoom.appendChild(gollum)
-
   }
 
   // COMMIT YOUR WORK
@@ -400,7 +399,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // ===================================================================
   // If you're tired of having to click the button each time to run your
   // function, uncomment the function call line below.
-  // weWantsIt()
+  weWantsIt()
   // ===================================================================
 
   // ============
@@ -409,9 +408,20 @@ document.addEventListener('DOMContentLoaded', () => {
   const thereAndBackAgain = function () {
 
     // 1. remove Gollum and the Ring from the DOM
+    let mountDoom = document.querySelector('#mount-doom');
+    let gollum = document.querySelector('#gollum');
+    gollum.remove();
     // 2. remove all the baddies from the DOM
+    let lisBaddies = document.querySelectorAll(".baddy");
+    for (let i = 0; i < lisBaddies.length; i++) {
+      lisBaddies[i].remove();
+    }
     // 3. Move all the hobbits back to the shire
-
+    let lisHobbies = document.querySelectorAll(".hobbit");
+    shire = document.querySelector('#The-Shire');
+    for (let i = 0; i < lisHobbies.length; i++) {
+      shire.appendChild(lisHobbies[i]);
+    }
   }
 
   // COMMIT YOUR WORK
