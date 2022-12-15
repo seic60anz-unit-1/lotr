@@ -216,7 +216,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const beautifulStranger = function () {
 
     // 1. change the buddy 'Strider' text to "Aragorn"
-
+    const strider = document.querySelector('#middle-earth aside ul li:nth-child(4)')
+    strider.textContent = "Aragorn"
   }
 
   // COMMIT YOUR WORK
@@ -225,7 +226,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // ===================================================================
   // If you're tired of having to click the button each time to run your
   // function, uncomment the function call line below.
-  // beautifulStranger()
+  beautifulStranger()
   // ===================================================================
 
   // ============
