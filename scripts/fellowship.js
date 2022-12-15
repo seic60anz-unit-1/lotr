@@ -321,7 +321,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const newDiv = document.createElement('div')
     newDiv.setAttribute('id', 'mount-doom')
     mordor.append(newDiv)
-    console.log(document.querySelector('#middle-earth'))
   }
 
   // COMMIT YOUR WORK
@@ -339,9 +338,18 @@ document.addEventListener('DOMContentLoaded', () => {
   const weWantsIt = function () {
 
     // 1. Create a div with an id of 'gollum' and add it to Mordor
+    const newDiv = document.createElement('div')
+    newDiv.setAttribute('id', 'gollum')
+    const mordor = document.querySelector('#Mordor')
+    mordor.append(newDiv)
+    
     // 2. Move the ring from Frodo and give it to Gollum
+    const ring = document.querySelector('#the-ring')
+    newDiv.append(ring)
+    
     // 3. Move Gollum into Mount Doom
-
+    const mountDoom = document.querySelector('#mount-doom')
+    mountDoom.append(newDiv)
   }
 
   // COMMIT YOUR WORK
@@ -350,7 +358,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // ===================================================================
   // If you're tired of having to click the button each time to run your
   // function, uncomment the function call line below.
-  // weWantsIt()
+  weWantsIt()
   // ===================================================================
 
   // ============
