@@ -235,10 +235,19 @@ document.addEventListener('DOMContentLoaded', () => {
   const forgeTheFellowShip = function () {
 
     // 1. create a new div with an id 'the-fellowship'
+    const newDiv = document.createElement('div')
+    newDiv.setAttribute('id', 'the-fellowship')
     // 2. add an h1 with the text 'The Fellowship' to this new div
+    const newH1 = document.createElement('h1')
+    newH1.textContent = "The Fellowship"
+    newDiv.append(newH1)
     // 3. append the fellowship to middle-earth
+    const middleEarth = document.querySelector('#middle-earth')
+    middleEarth.append(newDiv)
     // 4. add the unordered lists of hobbits and buddies to 'the-fellowship'
-
+    const hobbits = document.querySelector('#Rivendell ul')
+    const buddies = document.querySelector('#middle-earth aside ul')
+    newDiv.append(hobbits, buddies)
   }
 
   // COMMIT YOUR WORK
@@ -247,7 +256,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // ===================================================================
   // If you're tired of having to click the button each time to run your
   // function, uncomment the function call line below.
-  // forgeTheFellowShip()
+  forgeTheFellowShip()
   // ===================================================================
 
   // ============
