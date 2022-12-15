@@ -39,18 +39,37 @@ document.addEventListener('DOMContentLoaded', () => {
   const makeMiddleEarth = function () {
 
     // HINT: Make a console.log for each of your functions to make sure that, when you click, the correct function is being called!
-    console.log('making Middle Earth');
+    // console.log('making Middle Earth');
     // console.log("Trying to make middle earth.");
 
     // 1. create a section tag with an id of middle-earth
+    let section = document.createElement('section');
+    section.id = 'middle-earth';
     // 2. append the section to the body of the DOM.
+    document.querySelector('body').appendChild(section);
     // 3. use a for loop to iterate over the lands array that does the following:
     //   3a. creates an article tag (there should be one for each land when the loop is done)
+          for (let i of lands) {
+            let article = document.createElement('article');
+            document.querySelector('body').appendChild(article);
+          }
     //   3b. gives each land article an `id` tag of the corresponding land name
+          let article = document.querySelectorAll('article');
+          for (let i = 0; i < lands.length; i++) {
+            article[i].id = lands[i];
+          }
     //   3c. creates an h1 with the name of the land as text content
+          for (let i = 0; i < lands.length; i++) {
+            let h1 = document.createElement('h1');
+            let textNode = document.createTextNode(lands[i]);
+            h1.appendChild(textNode);
     //   3d. appends the h1 to the article just created
+            document.querySelector('#'+lands[i]).appendChild(h1);
+          }
     //   3e. appends each land to the middle-earth section
-
+          for (let i = 0; i < lands.length; i++) {
+            document.querySelector('#middle-earth').appendChild(article[i]);
+          }
   }
 
   // COMMIT YOUR WORK
@@ -59,7 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // ===================================================================
   // If you're tired of having to click the button each time to run your
   // function, uncomment the function call line below.
-  // makeMiddleEarth()
+  makeMiddleEarth()
   // ===================================================================
 
   // ============
@@ -70,12 +89,22 @@ document.addEventListener('DOMContentLoaded', () => {
     // Goal: display an unordered list of hobbits in the shire (which is the first article tag on the page)
 
     // 1. create a 'ul'
+    let ul = document.createElement('ul');
     // 2. make each hobbit an li element and append it to the 'ul' you just created
+    for (let i = 0; i < hobbits.length; i++) {
+      let li = document.createElement('li');
+      let textNode = document.createTextNode(hobbits[i]);
+      li.appendChild(textNode);
+      ul.appendChild(li);
+    
     // hint: use the given 'hobbits' array and use a loop
     // 3. also, give each hobbit (`li`) a class of "hobbit"
+      li.className = 'hobbit';
+    }
     // 4. append the ul to the shire
     // hint: get 'The-Shire' by using its id
-
+      let shire = document.querySelector('#'+lands[lands.indexOf('The-Shire')]);
+      shire.appendChild(ul);
   }
 
   // COMMIT YOUR WORK
@@ -84,7 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // ===================================================================
   // If you're tired of having to click the button each time to run your
   // function, uncomment the function call line below.
-  // makeHobbits()
+  makeHobbits()
   // ===================================================================
 
   // ============
@@ -93,7 +122,17 @@ document.addEventListener('DOMContentLoaded', () => {
   const keepItSecretKeepItSafe = function () {
 
     // 1. create an empty div with an id of 'the-ring'
+    let ring = document.createElement('div');
+    ring.id = 'the-ring';
+
     // 2. add the ring as a child of Frodo
+    let lisHobbit = document.querySelectorAll('.hobbit')
+    for (let i = 0; i < lisHobbit.length ; i++) {
+      if (lisHobbit[i].innerHTML.includes('Frodo') === true){
+        lisHobbit[i].appendChild(ring);
+      }
+    }
+
     // hint: Frodo does not have an id, but there is a command to retrieve all elements with a certain class. This should give you an array for you to access . . .
     // when you think you have given Frodo the ring, check in your Elements tab to see that it works correctly
 
@@ -105,7 +144,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // ===================================================================
   // If you're tired of having to click the button each time to run your
   // function, uncomment the function call line below.
-  // keepItSecretKeepItSafe()
+  keepItSecretKeepItSafe()
   // ===================================================================
 
   // ============
@@ -114,18 +153,26 @@ document.addEventListener('DOMContentLoaded', () => {
   const makeBaddies = function () {
 
     // 1. display an unordered list of baddies in Mordor
+    let ul = document.createElement('ul');
+    for (let i = 0; i < baddies.length; i++) {
+      let li = document.createElement('li');
+      let textNode = document.createTextNode(baddies[i]);
+      li.appendChild(textNode);
+      ul.appendChild(li);
     // 2. give each of the baddies a class of "baddy"
+      li.className = 'baddy';
+    }
     // 3. remember to append the ul to Mordor
-
+      const mordor = document.querySelector('#'+lands[lands.indexOf('Mordor')]);
+      mordor.appendChild(ul);
   }
-
   // COMMIT YOUR WORK
   // The commit message should read: "Chapter 4 complete - Made the Baddies"..
 
   // ===================================================================
   // If you're tired of having to click the button each time to run your
   // function, uncomment the function call line below.
-  // makeBaddies()
+  makeBaddies()
   // ===================================================================
 
   // ============
@@ -134,19 +181,29 @@ document.addEventListener('DOMContentLoaded', () => {
   const makeBuddies = function () {
 
     // 1. create an aside tag and append it to middle-earth below mordor
+    let aside = document.createElement('aside');
+    let middleEarth = document.querySelector('#middle-earth');
+    middleEarth.appendChild(aside);
     // 2. display an unordered list of buddies in the aside
+    let ul = document.createElement('ul');
+    for (let i = 0; i < buddies.length; i++) {
+      let li = document.createElement('li');
+      let textNode = document.createTextNode(buddies[i]);
+      li.appendChild(textNode);
+      ul.appendChild(li);
     // 3. give each of the buddies a class of "buddy"
+      li.className = 'buddy';
+    }
     // 4. don't forget to append them to the aside
-
+      aside.appendChild(ul);
   }
-
   // COMMIT YOUR WORK
   // The commit message should read: "Chapter 5 complete - Made the Buddies".
 
   // ===================================================================
   // If you're tired of having to click the button each time to run your
   // function, uncomment the function call line below.
-  // makeBuddies()
+  makeBuddies()
   // ===================================================================
 
   // ============
@@ -156,16 +213,19 @@ document.addEventListener('DOMContentLoaded', () => {
   const leaveTheShire = function () {
     // 1. grab the hobbits (the ul in which they reside) and move them to Rivendell
     // hint: the hobbits ul is a childNode of The-Shire-- there is way to get a list of childNodes
-
+    let lisHobbits = document.querySelectorAll(".hobbit");
+    let rivendell = document.querySelector("#Rivendell");
+    for (let i = 0; i < hobbits.length; i++) {
+      rivendell.appendChild(lisHobbits[i]);
+    }
   }
-
   // COMMIT YOUR WORK
   // The commit message should read: "Chapter 6 complete - Left the Shire"
 
   // ===================================================================
   // If you're tired of having to click the button each time to run your
   // function, uncomment the function call line below.
-  // leaveTheShire()
+  leaveTheShire()
   // ===================================================================
 
   // ============
@@ -174,16 +234,20 @@ document.addEventListener('DOMContentLoaded', () => {
   const beautifulStranger = function () {
 
     // 1. change the buddy 'Strider' text to "Aragorn"
-
+    let lisBuddies = document.querySelectorAll(".buddy");
+    for (i = 0; i < lisBuddies.length; i++) {
+      if (lisBuddies[i].innerHTML === "Strider") {
+        lisBuddies[i].innerHTML = "Aragorn";
+      }
+    }
   }
-
   // COMMIT YOUR WORK
   // The commit message should read: "Chapter 7 complete - Strider is changed to Aragorn"
 
   // ===================================================================
   // If you're tired of having to click the button each time to run your
   // function, uncomment the function call line below.
-  // beautifulStranger()
+  beautifulStranger()
   // ===================================================================
 
   // ============
@@ -192,10 +256,24 @@ document.addEventListener('DOMContentLoaded', () => {
   const forgeTheFellowShip = function () {
 
     // 1. create a new div with an id 'the-fellowship'
+    let fellowship = document.createElement('div')
+    fellowship.id = 'the-fellowship'
     // 2. add an h1 with the text 'The Fellowship' to this new div
+    let h1 = document.createElement('h1');
+    let textNode = document.createTextNode('The Fellowship');
+    h1.appendChild(textNode);
+    fellowship.appendChild(h1);
     // 3. append the fellowship to middle-earth
+    document.querySelector("#middle-earth").appendChild(fellowship)
     // 4. add the unordered lists of hobbits and buddies to 'the-fellowship'
-
+    let lisHobbits = document.querySelectorAll(".hobbit");
+    let lisBuddies = document.querySelectorAll(".buddy");
+    for (let i = 0; i < hobbits.length; i++) {
+      fellowship.appendChild(lisHobbits[i]);
+    }
+    for (let i = 0; i < buddies.length; i++) {
+      fellowship.appendChild(lisBuddies[i]);
+    }
   }
 
   // COMMIT YOUR WORK
@@ -204,7 +282,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // ===================================================================
   // If you're tired of having to click the button each time to run your
   // function, uncomment the function call line below.
-  // forgeTheFellowShip()
+  forgeTheFellowShip()
   // ===================================================================
 
   // ============
@@ -213,9 +291,16 @@ document.addEventListener('DOMContentLoaded', () => {
   const theBalrog = function () {
 
     // 1. change the 'Gandalf' text to 'Gandalf the White'
+    let lisBuddies = document.querySelectorAll(".buddy");
+    for (i = 0; i < lisBuddies.length; i++) {
+      if (lisBuddies[i].innerHTML.includes("Gandalf") === true) {
+        lisBuddies[i].innerHTML = "Gandalf the White";
     // 2. add a class "the-white" to this element
+        lisBuddies[i].classList.add("the-white");
+      }
+    }
     // 3. in the style.css file, add a css rule to make elements of the class "the-white" have a white background and a grey border
-
+    /*DONE!*/
   }
 
   // COMMIT YOUR WORK
@@ -224,7 +309,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // ===================================================================
   // If you're tired of having to click the button each time to run your
   // function, uncomment the function call line below.
-  // theBalrog()
+  theBalrog()
   // ===================================================================
 
   // ============
@@ -233,9 +318,21 @@ document.addEventListener('DOMContentLoaded', () => {
   const hornOfGondor = function () {
 
     // 1. create a pop-up alert that the horn of gondor has been blown
+    alert('The horn of gondor has been blown!')
     // 2. Boromir's been killed by the Uruk-hai! Put a linethrough on Boromir's name
+    let lisBuddies = document.querySelectorAll(".buddy");
+    for (i = 0; i < lisBuddies.length; i++) {
+      if (lisBuddies[i].innerHTML.includes("Boromir") === true) {
+        lisBuddies[i].style.textDecoration = "line-through";
+      }
+    }
     // 3. Tricky: Remove the Uruk-Hai from the Baddies on the page
-
+    let lisBaddies = document.querySelectorAll(".baddy");
+    for (let i = 0; i < lisBaddies.length; i++) {
+      if (lisBaddies[i].innerHTML === 'The Uruk-hai') {
+        lisBaddies[i].remove();
+      }
+    }   
   }
 
   // COMMIT YOUR WORK
@@ -244,7 +341,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // ===================================================================
   // If you're tired of having to click the button each time to run your
   // function, uncomment the function call line below.
-  // hornOfGondor()
+  hornOfGondor()
   // ===================================================================
 
   // ============
@@ -253,8 +350,20 @@ document.addEventListener('DOMContentLoaded', () => {
   const itsDangerousToGoAlone = function () {
 
     // 1. take Frodo and Sam out of the fellowship and move them to Mordor (they don't need to be inside a ul in Mordor)
+    let lisHobbits = document.querySelectorAll(".hobbit");
+    let mordor = document.querySelector('#Mordor');
+    for (let i = 0; i < lisHobbits.length; i++) {
+      if (lisHobbits[i].innerHTML.includes('Frodo') === true) {
+        mordor.appendChild(lisHobbits[i]);
+      }
+      if (lisHobbits[i].innerHTML.includes('Sam') === true) {
+        mordor.appendChild(lisHobbits[i]);
+      }
+    }
     // 2. add a div with an id of 'mount-doom' to Mordor
-
+    let div = document.createElement('div');
+    div.id = 'mount-doom';
+    mordor.appendChild(div);
   }
 
   // COMMIT YOUR WORK
@@ -263,7 +372,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // ===================================================================
   // If you're tired of having to click the button each time to run your
   // function, uncomment the function call line below.
-  // itsDangerousToGoAlone()
+  itsDangerousToGoAlone()
   // ===================================================================
 
   // ============
@@ -272,9 +381,16 @@ document.addEventListener('DOMContentLoaded', () => {
   const weWantsIt = function () {
 
     // 1. Create a div with an id of 'gollum' and add it to Mordor
+    let div = document.createElement('div');
+    div.id = 'gollum';
+    let mordor = document.querySelector('#Mordor');
+    mordor.appendChild(div);
     // 2. Move the ring from Frodo and give it to Gollum
+    let ring = document.querySelector('#the-ring');
+    gollum.appendChild(ring);
     // 3. Move Gollum into Mount Doom
-
+    let mountDoom = document.querySelector('#mount-doom');
+    mountDoom.appendChild(gollum)
   }
 
   // COMMIT YOUR WORK
@@ -283,7 +399,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // ===================================================================
   // If you're tired of having to click the button each time to run your
   // function, uncomment the function call line below.
-  // weWantsIt()
+  weWantsIt()
   // ===================================================================
 
   // ============
@@ -292,9 +408,20 @@ document.addEventListener('DOMContentLoaded', () => {
   const thereAndBackAgain = function () {
 
     // 1. remove Gollum and the Ring from the DOM
+    let mountDoom = document.querySelector('#mount-doom');
+    let gollum = document.querySelector('#gollum');
+    gollum.remove();
     // 2. remove all the baddies from the DOM
+    let lisBaddies = document.querySelectorAll(".baddy");
+    for (let i = 0; i < lisBaddies.length; i++) {
+      lisBaddies[i].remove();
+    }
     // 3. Move all the hobbits back to the shire
-
+    let lisHobbies = document.querySelectorAll(".hobbit");
+    shire = document.querySelector('#The-Shire');
+    for (let i = 0; i < lisHobbies.length; i++) {
+      shire.appendChild(lisHobbies[i]);
+    }
   }
 
   // COMMIT YOUR WORK

@@ -68,6 +68,13 @@ article:nth-child(2) {
   top: 34%;
 }
 
+.the-white {
+  background-color: white;
+  border-color: gray;
+  border-style: solid;
+
+}
+
 /* Mordor */
 article:nth-child(3) {
   left: 71%;
@@ -166,3 +173,4 @@ audio {
   }
 
 }
+
